@@ -8,7 +8,7 @@ export default class Login extends Component {
     this.state = {
       value: '',
       submitButtonText: 'Login',
-      // auth: null,
+      auth: sessionStorage.getItem('auth') || null, // If nothing is set to null
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -22,6 +22,9 @@ export default class Login extends Component {
   handleSubmit(event) {
     event.preventDefault();
 
+    if (this.state.auth) { return; } // Exit if already authenticated.
+    if (this.state.value < 1) { return; } // Return if no input is made (or if only whitespace).
+
     // TODO: make better code
     // Login user
     if (this.state.submitButtonText === 'Login') { // TODO: Change to flag!
@@ -29,12 +32,11 @@ export default class Login extends Component {
         .then(response => response.json())
         .then(data => {
           if (data.length > 0) {
-            alert(`${this.state.value} was found in database!`);
-            // this.setState({ auth: data });
+            console.log(`${this.state.value} was found in database!`);
             sessionStorage.setItem('auth', data); // Temporary fix
-            return <Navigate to="/profile" />;
+            this.setState({ auth: data });
           } else {
-            alert(`${this.state.value} was not found in database!`);
+            console.log(`${this.state.value} was not found in database!`);
             this.setState({ submitButtonText: 'Create' });
           }
         });
@@ -53,6 +55,7 @@ export default class Login extends Component {
         .then(data => {
           console.log(data);
           this.setState({ submitButtonText: 'Login' });
+          this.setState({ auth: data });
         });
     }
   }
@@ -60,11 +63,18 @@ export default class Login extends Component {
   render() {
     return (
       <div className="page login">
-        <form onSubmit={this.handleSubmit}>
-          <label htmlFor="">Username</label>
-          <input value={this.state.value} onChange={this.handleChange} placeholder="John Doe..." />
-          <button type="submit">{this.state.submitButtonText}</button>
-        </form>
+        {
+          this.state.auth ?
+            // Go to Profile page when authenticated.
+            <Navigate to="/profile" />
+            :
+            // Show form if no user is authenticated.
+            <form onSubmit={this.handleSubmit}>
+              <label htmlFor="">Username</label>
+              <input value={this.state.value} onChange={this.handleChange} placeholder="John Doe..." />
+              <button type="submit">{this.state.submitButtonText}</button>
+            </form>
+        }
       </div>
     );
   }
