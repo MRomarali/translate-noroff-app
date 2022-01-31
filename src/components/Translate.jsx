@@ -1,14 +1,15 @@
 import React from "react";
 import { Navigate } from "react-router-dom";
 import { useState } from "react/cjs/react.development";
+import { getAuth } from "../storage/Session";
 
 export default function Translate() {
-  //const [auth, setAuth] = useState(sessionStorage.getItem('auth'));
+  //const [auth, setAuth] = useState(sessionStorage.getItem('auth')); // getAuth();
   const [value, setValue] = useState('');
   const [imageSequence, setImageSequence] = useState([]);
-  const auth = sessionStorage.getItem('auth');
-  if (!auth) { return <Navigate to="/login" />; }
-  // setAuth(sessionStorage.getItem('auth'));
+  const auth = getAuth();
+  if (!auth) { return <Navigate to="/Login" />; }
+  // setAuth(sessionStorage.getItem('auth')); // getAuth();
 
   const handleChange = (event) => {
     setValue(event.target.value);
