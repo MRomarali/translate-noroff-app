@@ -14,14 +14,14 @@ export default function Translate() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const input = value.replaceAll(' ', ''); // Remove whitespaces
-    // TODO: add number handling
-    const tempArray = [];
+    const regExp = /[^A-Za-z]/g;
+    const input = value.replaceAll(regExp, "");
 
+    const tempArray = [];
     for (let index = 0; index < input.length; index++) {
       tempArray.push(input[index]);
     }
-    
+
     setImageSequence(tempArray);
   }
 
