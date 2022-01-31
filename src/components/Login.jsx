@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Navigate } from "react-router-dom";
-
-const API_URL = "https://my-json-server.typicode.com/OmarAbdiAli/translate-noroff-app";
+import { API_URL } from "./Index";
 
 export default class Login extends Component {
   constructor(props) {
