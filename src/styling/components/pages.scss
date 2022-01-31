@@ -21,6 +21,12 @@
                 width: max(30rem, 50%);
                 z-index: 2;
             }
+            
+            &.sign-language {
+                display: inline;
+                width: 15%;
+                aspect-ratio: 1/2;
+            }            
         }
     }
 }
