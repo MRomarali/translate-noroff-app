@@ -6,16 +6,13 @@ export default function Navigation() {
     <nav>
       <ul>
         <li>
-          <NavLink to="/">Home</NavLink>
+          <NavLink to="/">Translate</NavLink>
         </li>
         <li>
           <NavLink to="/Login">Login</NavLink>
         </li>
         <li>
           <NavLink to="/Profile">Profile</NavLink>
-        </li>
-        <li>
-          <NavLink to="/Translate">Translate</NavLink>
         </li>
       </ul>
     </nav>
