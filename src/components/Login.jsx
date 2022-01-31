@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-const API_URL = "https://my-json-server.typicode.com/cusatelli/Noroff-Assignment_3";
+const API_URL = "https://my-json-server.typicode.com/OmarAbdiAli/translate-noroff-app";
 
 export default class Login extends Component {
   constructor(props) {
