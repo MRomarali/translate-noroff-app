@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Navigate } from "react-router-dom";
-import { API_URL } from "./Index";
+import { API_URL } from "../api/Index";
+import { getAuth, setAuth } from "../storage/Session";
 
 export default class Login extends Component {
   constructor(props) {
@@ -8,7 +9,7 @@ export default class Login extends Component {
     this.state = {
       value: '',
       submitButtonText: 'Login',
-      auth: sessionStorage.getItem('auth') || null, // If nothing is set to null
+      auth: getAuth() || null, // If nothing is set to null
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -33,7 +34,7 @@ export default class Login extends Component {
         .then(data => {
           if (data.length > 0) {
             console.log(`${this.state.value} was found in database!`);
-            sessionStorage.setItem('auth', data); // Temporary fix
+            setAuth(data); // Temporary fix
             this.setState({ auth: data });
           } else {
             console.log(`${this.state.value} was not found in database!`);
@@ -66,7 +67,7 @@ export default class Login extends Component {
         {
           this.state.auth ?
             // Go to Profile page when authenticated.
-            <Navigate to="/profile" />
+            <Navigate to="/" />
             :
             // Show form if no user is authenticated.
             <form onSubmit={this.handleSubmit}>
