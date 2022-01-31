@@ -28,6 +28,56 @@ export default function Profile() {
             "id": 2,
             "name": "How did I say Hi again?",
             "sequence": ["h", "o", "w", "d", "i", "d", "i", "s", "a", "y", "h", "i", "a", "g", "a", "i", "n"]
+          },
+          {
+            "id": 3,
+            "name": "How did I say Hi again?",
+            "sequence": ["h", "o", "w", "d", "i", "d", "i", "s", "a", "y", "h", "i", "a", "g", "a", "i", "n"]
+          },
+          {
+            "id": 4,
+            "name": "How did I say Hi again?",
+            "sequence": ["h", "o", "w", "d", "i", "d", "i", "s", "a", "y", "h", "i", "a", "g", "a", "i", "n"]
+          },
+          {
+            "id": 5,
+            "name": "How did I say Hi again?",
+            "sequence": ["h", "o", "w", "d", "i", "d", "i", "s", "a", "y", "h", "i", "a", "g", "a", "i", "n"]
+          },
+          {
+            "id": 6,
+            "name": "How did I say Hi again?",
+            "sequence": ["h", "o", "w", "d", "i", "d", "i", "s", "a", "y", "h", "i", "a", "g", "a", "i", "n"]
+          },
+          {
+            "id": 7,
+            "name": "How did I say Hi again?",
+            "sequence": ["h", "o", "w", "d", "i", "d", "i", "s", "a", "y", "h", "i", "a", "g", "a", "i", "n"]
+          },
+          {
+            "id": 8,
+            "name": "How did I say Hi again?",
+            "sequence": ["h", "o", "w", "d", "i", "d", "i", "s", "a", "y", "h", "i", "a", "g", "a", "i", "n"]
+          },
+          {
+            "id": 9,
+            "name": "How did I say Hi again?",
+            "sequence": ["h", "o", "w", "d", "i", "d", "i", "s", "a", "y", "h", "i", "a", "g", "a", "i", "n"]
+          },
+          {
+            "id": 10,
+            "name": "Number 10",
+            "sequence": ["h", "o", "w", "d", "i", "d", "i", "s", "a", "y", "h", "i", "a", "g", "a", "i", "n"]
+          },
+          {
+            "id": 11,
+            "name": "Number 11",
+            "sequence": ["h", "o", "w", "d", "i", "d", "i", "s", "a", "y", "h", "i", "a", "g", "a", "i", "n"]
+          },
+          {
+            "id": 12,
+            "name": "Number 12",
+            "sequence": ["h", "o", "w", "d", "i", "d", "i", "s", "a", "y", "h", "i", "a", "g", "a", "i", "n"]
           }
         ]);
       });
@@ -38,6 +88,7 @@ export default function Profile() {
       <h1>Profile Page</h1>
       <div>
         {translations.map((translation, index) => {
+          if (index >= 10) { return; } // Return nothing if at number 10.
           return (
             <div className="translation" key={index}>
               <h2>English</h2>
