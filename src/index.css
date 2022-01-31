@@ -140,10 +140,36 @@ nav ul li a.active {
   width: max(30rem, 50%);
   z-index: 2;
 }
-.page img.sign-language {
+.page.profile {
+  width: 75%;
+  margin-inline: auto;
+  margin-block-end: 5.5rem;
+}
+.page.profile .translation {
+  width: 100%;
+  background-color: #CCC;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+  padding: 1rem;
+  margin-block: 0.5rem;
+  border-radius: 0.2rem;
+}
+.page.profile .translation * {
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+.page.profile .translation h2 {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.page.profile .translation p {
+  font-size: 2rem;
+  margin-block: 0.25rem 1rem;
+}
+.page.profile .translation img.sign-language {
   display: inline;
-  width: 15%;
+  width: 10%;
   aspect-ratio: 1/2;
+  border-radius: 0.2rem;
 }
 
 /*# sourceMappingURL=index.css.map */
