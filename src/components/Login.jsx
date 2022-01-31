@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Navigate } from "react-router-dom";
 
 const API_URL = "https://my-json-server.typicode.com/OmarAbdiAli/translate-noroff-app";
 
@@ -8,6 +9,7 @@ export default class Login extends Component {
     this.state = {
       value: '',
       submitButtonText: 'Login',
+      // auth: null,
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -29,6 +31,9 @@ export default class Login extends Component {
         .then(data => {
           if (data.length > 0) {
             alert(`${this.state.value} was found in database!`);
+            // this.setState({ auth: data });
+            sessionStorage.setItem('auth', data); // Temporary fix
+            return <Navigate to="/profile" />;
           } else {
             alert(`${this.state.value} was not found in database!`);
             this.setState({ submitButtonText: 'Create' });
@@ -46,7 +51,10 @@ export default class Login extends Component {
         }
       })
         .then(response => response.json())
-        .then(data => { console.log(data); });
+        .then(data => {
+          console.log(data);
+          this.setState({ submitButtonText: 'Login' });
+        });
     }
   }
 
