@@ -1,7 +1,8 @@
 import React from "react";
 import { Navigate } from "react-router-dom";
 
-export default function Profile({ auth }) {
+export default function Profile() {
+  const auth = sessionStorage.getItem('auth');
   if (!auth) { return <Navigate to="/login" />; }
 
   return (
