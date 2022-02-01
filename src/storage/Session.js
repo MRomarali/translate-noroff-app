@@ -1,8 +1,11 @@
 
 export function getAuth() {
-    return JSON.parse(sessionStorage.getItem('auth'))[0];
+    const auth = sessionStorage.getItem('auth');
+    if (!auth) { return null; }
+
+    return JSON.parse(auth)[0];
 }
 
 export function setAuth(data) {
-    return sessionStorage.setItem('auth', JSON.stringify(data))
+    return sessionStorage.setItem('auth', JSON.stringify(data)) || null;
 }
