@@ -1,5 +1,7 @@
 
 .page {
+    color: #FFF;
+
     .header {
         img {
             position: absolute;
@@ -28,10 +30,14 @@
         width: 75%;
         margin-inline: auto;
         margin-block-end: 5.5rem;
+        
+        h1 {
+            color: #000;
+        }
 
         .translation {
             width: 100%;
-            background-color: #CCC;
+            background-color: rgb(37, 37, 37);
             box-shadow: 2px 2px 2px rgba($color: #000000, $alpha: 0.4);
             padding: 1rem;
             margin-block: 0.5rem;
@@ -49,10 +55,10 @@
 
             p {
                 font-size: 2rem;
-                margin-block: 0.25rem 1rem;
+                margin-block: 0.1rem 1rem;
 
                 &.id {
-                    color: rgba($color: #000000, $alpha: 0.3);
+                    color: rgba($color: #FFFFFF, $alpha: 0.3);
                     float: right;
                     font-size: 0.75rem;
                     justify-content: flex-end;
@@ -69,6 +75,7 @@
                     width: 10%;
                     aspect-ratio: 1/2;
                     border-radius: 0.2rem;
+                    margin-block: 1rem 0.1rem;
                 }  
             }
         }

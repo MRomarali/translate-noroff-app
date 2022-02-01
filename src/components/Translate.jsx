@@ -65,7 +65,10 @@ export default function Translate() {
     <div className="page translate">
       <form onSubmit={handleSubmit}>
         <label>English</label>
-        <input value={value} onChange={handleChange} placeholder="Hello..." />
+        <div className="input">
+          <input value={value} onChange={handleChange} placeholder="Hello..." />
+          <button type="submit" disabled={disabled} className={disabled ? "disabled" : ""}>→</button>
+        </div>
         <label>American Sign-Language</label>
         <div>
           {/* Iterate over image sequence array & set each character to an image from resources */}
@@ -78,7 +81,6 @@ export default function Translate() {
             />
           })}
         </div>
-        <button type="submit" disabled={disabled} className={disabled ? "disabled" : ""}>Send</button>
       </form>
     </div>
   );

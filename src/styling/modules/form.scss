@@ -25,4 +25,30 @@ form {
         margin-block: 1rem 0;
         border-radius: 0.2rem;
     }
+    
+    .input {
+        input {
+            width: calc(100% - 4rem - 2rem);
+            margin-inline-end: 2rem;
+        }
+        
+        button {
+            margin-block: 0;
+            width: 4rem;
+            font-size: 2rem;
+            padding-bottom: 0.8rem;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            color: #FFF;
+            background-color: royalblue;
+            cursor: pointer;
+
+            &.disabled {
+                color: rgb(77, 77, 77);
+                background-color: rgb(54, 54, 54);
+                box-shadow: none;
+                cursor: default;
+            }
+        }
+    }
 }

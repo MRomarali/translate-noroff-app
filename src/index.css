@@ -8,7 +8,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: #FFFFFF;
+  background-color: #E5E5E5;
   color: #000;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -99,6 +99,27 @@ form button {
   margin-block: 1rem 0;
   border-radius: 0.2rem;
 }
+form .input input {
+  width: calc(100% - 4rem - 2rem);
+  margin-inline-end: 2rem;
+}
+form .input button {
+  margin-block: 0;
+  width: 4rem;
+  font-size: 2rem;
+  padding-bottom: 0.8rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  color: #FFF;
+  background-color: royalblue;
+  cursor: pointer;
+}
+form .input button.disabled {
+  color: #4d4d4d;
+  background-color: #363636;
+  box-shadow: none;
+  cursor: default;
+}
 
 nav {
   position: fixed;
@@ -107,6 +128,7 @@ nav {
   width: fit-content;
   border-radius: 1rem 1rem 0 0;
   background-color: #FFF;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
   z-index: 999;
 }
 nav ul {
@@ -130,6 +152,9 @@ nav ul li a.active {
   background-color: #6ba6ff;
 }
 
+.page {
+  color: #FFF;
+}
 .page .header img {
   position: absolute;
 }
@@ -154,9 +179,12 @@ nav ul li a.active {
   margin-inline: auto;
   margin-block-end: 5.5rem;
 }
+.page.profile h1 {
+  color: #000;
+}
 .page.profile .translation {
   width: 100%;
-  background-color: #CCC;
+  background-color: #252525;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
   padding: 1rem;
   margin-block: 0.5rem;
@@ -172,10 +200,10 @@ nav ul li a.active {
 }
 .page.profile .translation p {
   font-size: 2rem;
-  margin-block: 0.25rem 1rem;
+  margin-block: 0.1rem 1rem;
 }
 .page.profile .translation p.id {
-  color: rgba(0, 0, 0, 0.3);
+  color: rgba(255, 255, 255, 0.3);
   float: right;
   font-size: 0.75rem;
   justify-content: flex-end;
@@ -188,6 +216,7 @@ nav ul li a.active {
   width: 10%;
   aspect-ratio: 1/2;
   border-radius: 0.2rem;
+  margin-block: 1rem 0.1rem;
 }
 .page.translate img.sign-language {
   display: inline;
