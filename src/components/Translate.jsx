@@ -7,16 +7,19 @@ import { getAuth, setSessionTranslations } from "../storage/Session";
 export default function Translate() {
   const [value, setValue] = useState('');
   const [imageSequence, setImageSequence] = useState([]);
+  const [disabled, setDisabled] = useState(false);
   const auth = getAuth();
   if (!auth) { return <Navigate to="/Login" />; }
 
   const handleChange = (event) => {
+    setDisabled(false);
     const regExp = /[^A-Za-z\s]/g;
     setValue(event.target.value.replaceAll(regExp, "")); // Trim input from invalid characters
   }
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    setDisabled(true);
     const regExp = /[^A-Za-z]/g;
     const input = value.replaceAll(regExp, "");
     if(input < 1) {
@@ -50,7 +53,7 @@ export default function Translate() {
             />
           })}
         </div>
-        <button type="submit">Send</button>
+        <button type="submit" disabled={disabled} className={disabled ? "disabled" : ""}>Send</button>
       </form>
     </div>
   );
