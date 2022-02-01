@@ -1,9 +1,11 @@
 const jsonServer = require('json-server');
 const server = jsonServer.create();
 const router = jsonServer.router('db.json');
-const middlewares = jsonServer.defaults();
+const middlewares = jsonServer.defaults({
+  static: './build'
+});
 
-const port = process.env.PORT || 3001;
+const PORT = process.env.PORT || 8000;
 
 // Set default middlewares (logger, static, cors and no-cache)
 server.use(middlewares);
@@ -20,13 +22,17 @@ server.use((req, _res, next) => {
   next();
 });
 
+server.use(jsonServer.rewriter({
+  '/users/*': '/$1',
+}));
+
 // Use default router 
 server.use(router);
-server.listen(port, () => {
+server.listen(PORT, () => {
   console.log(
     '__________________________________\n\n'
     + '    JSON Server is running at:\n\n'
-    + `\u001b[34m----> http://localhost:${port} <----\u001b[0m`
+    + `\u001b[34m----> http://localhost:${PORT} <----\u001b[0m`
     + '\n__________________________________\n'
   );
 });
