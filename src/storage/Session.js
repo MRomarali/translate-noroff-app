@@ -3,7 +3,7 @@ export function getAuth() {
     const auth = sessionStorage.getItem('auth');
     if (!auth) { return null; }
 
-    return JSON.parse(auth)[0];
+    return JSON.parse(auth);
 }
 
 export function setAuth(data) {
