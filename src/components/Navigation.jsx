@@ -9,9 +9,6 @@ export default function Navigation() {
           <NavLink to="/">Translate</NavLink>
         </li>
         <li>
-          <NavLink to="/Login">Login</NavLink>
-        </li>
-        <li>
           <NavLink to="/Profile">Profile</NavLink>
         </li>
       </ul>
