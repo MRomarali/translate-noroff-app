@@ -3,6 +3,7 @@ import { setAuth } from "../storage/Session";
 export const API_URL = "https://translate-noroff-app.herokuapp.com/api";
 
 export async function apiPostUserLoginRequest(value) {
+    console.log(API_URL);
     await fetch(`${API_URL}/users?username=${value}`)
         .then(response => response.json())
         .then(data => {
