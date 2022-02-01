@@ -1,7 +1,7 @@
 <div id="top"></div>
 
 <div align="center">
-  <img src="src\assets\logo.png" alt="Translate logo" height="250">
+  <img src="resources\logo.png" alt="Translate logo" height="250">
   <h3 align="center">Assignment 3</h3>
   <p align="center">
     Heroku App
