@@ -1,29 +1,52 @@
-import React from "react";
+import React, { useReducer } from "react";
 import { Navigate } from "react-router-dom";
 import { useState } from "react/cjs/react.development";
 import { apiPostTranslationsRequest } from "../api/Index";
 import { getAuth, setSessionTranslations } from "../storage/Session";
 
 export default function Translate() {
-  const [value, setValue] = useState(() => { return ""; });
+  const initialState = {
+    value: ""
+  };
+
+  const reducer = (state, action) => {
+    switch (action.type) {
+      case "INPUT":
+        console.log(action)
+        return {
+          ...state,
+          value: action
+        };
+      default:
+        return state;
+    }
+  }
+
+  const [state, dispatch] = useReducer(reducer, initialState);
+  // const [value, setValue] = useState(() => { return ""; });
   const [imageSequence, setImageSequence] = useState(() => { return []; });
   const [disabled, setDisabled] = useState(() => { return false; });
-  
+
   const auth = getAuth();
   if (!auth) { return <Navigate to="/Login" />; }
 
   const handleChange = (event) => {
     setDisabled(false);
     const regExp = /[^A-Za-z\s]/g;
-    setValue(event.target.value.replaceAll(regExp, "")); // Trim input from invalid characters
+    dispatch({
+      state: event.target.value.replaceAll(regExp, ""),
+      type: 'INPUT'
+    }); // Trim input from invalid characters
   }
 
   const handleSubmit = (event) => {
     event.preventDefault();
     setDisabled(true);
     const regExp = /[^A-Za-z]/g;
-    const input = value.replaceAll(regExp, "");
-    if(input < 1) {
+    console.log(state)
+    let input = state.value.state;
+    input = input.replaceAll(regExp, "");
+    if (input < 1) {
       alert('Please enter a word before submitting.');
       return;
     }
@@ -42,7 +65,7 @@ export default function Translate() {
     <div className="page translate">
       <form onSubmit={handleSubmit}>
         <label>English</label>
-        <input value={value} onChange={handleChange} placeholder="Hello..." />
+        <input value={state.state} onChange={handleChange} placeholder="Hello..." />
         <label>American Sign-Language</label>
         <div>
           {imageSequence.map((char, index) => {
