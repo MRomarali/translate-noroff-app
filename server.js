@@ -23,7 +23,7 @@ server.use((req, _res, next) => {
 });
 
 server.use(jsonServer.rewriter({
-  '/users/*': '/$1',
+  '/api/*': '/$1',
 }));
 
 // Use default router 
