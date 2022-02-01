@@ -34,7 +34,7 @@ export default function Translate() {
 
     setImageSequence(tempArray);
     apiPostTranslationsRequest(getAuth().id, input, tempArray);
-    setSessionTranslations(input, tempArray);
+    setSessionTranslations(value, tempArray);
   }
 
   return (
