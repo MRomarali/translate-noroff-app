@@ -159,7 +159,7 @@ The following features/tools must be present in the application:
 # Resources
 Heroku: <a href="https://translate-noroff-app.herokuapp.com/">Demo</a>
 
-Figma: <a href="/resources/Figma_Diagram">Diagram</a>
+Figma: <a href="/resources/figma">Diagram</a>
 
 Code: <a href="/src">Source</a>
 
