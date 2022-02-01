@@ -1,6 +1,7 @@
 import { setAuth } from "../storage/Session";
 
-export const API_URL = "https://my-json-server.typicode.com/OmarAbdiAli/translate-noroff-app";//"https://translate-noroff-app.herokuapp.com/api";
+// export const API_URL = "https://my-json-server.typicode.com/OmarAbdiAli/translate-noroff-app";
+export const API_URL = "https://translate-noroff-app.herokuapp.com/api";
 
 export async function apiPostUserLoginRequest(value) {
     console.log(API_URL);
