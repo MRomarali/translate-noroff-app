@@ -23,6 +23,7 @@ export async function apiPostUserCreateRequest(value) {
         method: 'POST',
         body: JSON.stringify({
             username: value,
+            translations: [],
         }),
         headers: {
             'Content-Type': 'application/json'
@@ -33,4 +34,28 @@ export async function apiPostUserCreateRequest(value) {
             setAuth(data);
             return data;
         });
+}
+
+export async function apiPostTranslationsRequest(id, name, sequence) {
+    await fetch(`${API_URL}/users/?id=${id}/translations`, {
+        method: 'POST',
+        body: JSON.stringify({
+            translations: { name, sequence },
+        }),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+}
+
+export async function apiGetTranslations(id, numberOfTranslations = -1) {
+    const response = await fetch(`${API_URL}/users/?id=${id}/translations`);
+    const data = await response.json();
+
+    console.log(data);
+    // Return custom amount of items
+    if (numberOfTranslations > -1) {
+        return data.slice(numberOfTranslations, data.length);
+    }
+    return data.slice(0, data.length); // Return only 10 items
 }
