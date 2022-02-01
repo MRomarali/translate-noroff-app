@@ -4,6 +4,7 @@ import {
   Routes,
   Route
 } from "react-router-dom";
+import Home from '../components/Home';
 import Login from '../components/Login';
 import Navigation from "../components/Navigation";
 import Profile from '../components/Profile';
@@ -14,8 +15,9 @@ export default function Routing() {
     <BrowserRouter>
       <Navigation />
       <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/Login" element={<Login />} />
-        <Route path="/" element={<Translate />} />
+        <Route path="/Translate" element={<Translate />} />
         <Route path="/Profile" element={<Profile />} />
       </Routes>
     </BrowserRouter>
