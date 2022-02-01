@@ -19,4 +19,17 @@ button {
         box-shadow: inset -2px -2px 1px rgba($color: #FFF, $alpha: 0.5),
                     inset 2px 2px 1px rgba($color: #000, $alpha: 0.5);
     }
+
+    &.disabled {
+        background-color: rgb(163, 163, 163);
+        color: rgb(117, 117, 117);
+        cursor: default;
+        box-shadow: inset -1px -1px 1px rgba($color: #000, $alpha: 0.5),
+                    inset 1px 1px 1px rgba($color: #FFF, $alpha: 0.5);
+
+        &:hover {
+            box-shadow: inset -1px -1px 1px rgba($color: #000, $alpha: 0.5),
+                        inset 1px 1px 1px rgba($color: #FFF, $alpha: 0.5);
+        }
+    }
 }

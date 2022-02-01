@@ -44,6 +44,15 @@ button:hover {
 button:active {
   box-shadow: inset -2px -2px 1px rgba(255, 255, 255, 0.5), inset 2px 2px 1px rgba(0, 0, 0, 0.5);
 }
+button.disabled {
+  background-color: #a3a3a3;
+  color: #757575;
+  cursor: default;
+  box-shadow: inset -1px -1px 1px rgba(0, 0, 0, 0.5), inset 1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+button.disabled:hover {
+  box-shadow: inset -1px -1px 1px rgba(0, 0, 0, 0.5), inset 1px 1px 1px rgba(255, 255, 255, 0.5);
+}
 
 code,
 .code {
