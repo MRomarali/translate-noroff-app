@@ -1,22 +1,15 @@
 import { setAuth } from "../storage/Session";
 
-// export const API_URL = "https://my-json-server.typicode.com/OmarAbdiAli/translate-noroff-app";
-export const API_URL = "https://translate-noroff-app.herokuapp.com/api";
+export const API_URL = "https://my-json-server.typicode.com/OmarAbdiAli/translate-noroff-app";
+// export const API_URL = "https://translate-noroff-app.herokuapp.com/api";
 
 export async function apiPostUserLoginRequest(value) {
-    console.log(API_URL);
-    console.log(value);
     await fetch(`${API_URL}/users`)
-        .then(response => {
-            console.log(response);
-            return response.json()
-        })
+        .then(response => response.json())
         .then(data => {
-            console.log(data);
             if (data.length > 0) {
                 console.log(`${value} was found in database!`);
                 const user = data[0];
-                console.log(data[0]);
                 setAuth(user);
                 return user;
             } else {
@@ -60,7 +53,6 @@ export async function apiGetTranslations(id, numberOfTranslations = -1) {
     const response = await fetch(`${API_URL}/users/?id=${id}/translations`);
     const data = await response.json();
 
-    console.log(data);
     // Return custom amount of items
     if (numberOfTranslations > -1) {
         return data.slice(numberOfTranslations, data.length);

@@ -25,7 +25,6 @@ export default class Login extends Component {
     if (this.state.value < 1) { return this.redirect(); } // Return if no input is made (or if only whitespace).
 
     // Login user
-    console.log(this.state.value);
     await apiPostUserLoginRequest(this.state.value);
     this.setState({ auth: getAuth() });
   }
