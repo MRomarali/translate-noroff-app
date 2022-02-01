@@ -29,7 +29,7 @@ export default function Translate() {
 
     const tempArray = [];
     for (let index = 0; index < input.length; index++) {
-      tempArray.push(input[index]);
+      tempArray.push(input[index].toUpperCase()); // set to uppercase before sending to sessionStorage & API.
     }
 
     setImageSequence(tempArray);
