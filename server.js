@@ -24,9 +24,9 @@ server.use((req, _res, next) => {
 server.use(router);
 server.listen(port, () => {
   console.log(
-    '__________________________________\n'
-    + '    JSON Server is running at:\n'
+    '__________________________________\n\n'
+    + '    JSON Server is running at:\n\n'
     + `\u001b[34m----> http://localhost:${port} <----\u001b[0m`
-    + '__________________________________\n'
+    + '\n__________________________________\n'
   );
 });

@@ -37,20 +37,7 @@
       "last 1 safari version"
     ]
   },
-  "description": "<div id=\"top\"></div>",
-  "main": "server.js",
   "devDependencies": {
     "json-server": "^0.17.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/OmarAbdiAli/translate-noroff-app.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/OmarAbdiAli/translate-noroff-app/issues"
-  },
-  "homepage": "https://github.com/OmarAbdiAli/translate-noroff-app#readme"
+  }
 }
