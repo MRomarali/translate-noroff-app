@@ -16,6 +16,7 @@ export async function apiPostUserLoginRequest(value) {
             if (data.length > 0) {
                 console.log(`${value} was found in database!`);
                 const user = data[0];
+                console.log(data[0]);
                 setAuth(user);
                 return user;
             } else {
