@@ -1,24 +1,25 @@
 <div id="top"></div>
 
 <div align="center">
-  <img src="src\assets\logo.png" alt="Translate logo" width="250" height="250">
+  <img src="src\assets\logo.png" alt="Translate logo" height="250">
   <h3 align="center">Assignment 3</h3>
   <p align="center">
-    Noroff
+    Heroku App
     <br />
+    <a href="https://translate-noroff-app.herokuapp.com/">Demo</a>
   </p>
 </div>
 
 # Table of Contents
 1. [Instructions](#instructions)
 2. [Appendix A](#appendix-a)
-3. [Demo](#demo)
+3. [Resources](#resources)
 4. [Install](#install)
 5. [Usage](#usage)
-6. [Maintainers](#maintainers)
-7. [Contributing](#contributing)
-8. [Conventions](#conventions)
-9. [License](#license)
+6. [Demo](#demo)
+7. [Maintainers](#maintainers)
+8. [Contributing](#contributing)
+9. [Conventions](#conventions)
 10. [Contact](#contact)
 
 # Instructions
@@ -27,9 +28,9 @@
 ### Lost in Translation
 
 <p>
-    Build an online sign language translator as a Single Page Application using the React framework. 
-    You have freedom to be as creative as you wish, as long as it meets the minimum requirements described in 
-    Appendix A. 
+  Build an online sign language translator as a Single Page Application using the React framework. 
+  You have freedom to be as creative as you wish, as long as it meets the minimum requirements described in 
+  Appendix A. 
 </p>
 <ol>
   <li>
@@ -46,19 +47,17 @@
     </ul>
   </li>
   <li>
-        <p>Recommended: Design a wireframe</p>
-        <p>
-        Use Figma to create a wireframe of the layout. The layout should only show placeholders and positioning 
-        of your design (i.e., no colours or images required). 
-        </p>
-    
+    <p>Recommended: Design a wireframe</p>
+    <p>
+      Use Figma to create a wireframe of the layout. The layout should only show placeholders and positioning 
+      of your design (i.e., no colours or images required). 
+    </p>
   </li>
   <li>
     <p>Write HTML & CSS as needed</p>
     <ul>
-        <li> Colours: If you have trouble choosing colours, use a free resource like https://coolors.co to browse and 
-        experiment with colour combinations. </li>
-        <li>Animations: If you want to use animations to bring your design to life, use https://animate.style/.</li>
+      <li>Colours: If you have trouble choosing colours, use a free resource like https://coolors.co to browse and experiment with colour combinations.</li>
+      <li>Animations: If you want to use animations to bring your design to life, use https://animate.style/.</li>
     </ul>
   </li>
   <li>
@@ -73,9 +72,9 @@
   <li>
     <p>Submit</p>
     <ul>
-        <li>Export the wireframe to PDF, upload the file to the project’s Git repository and submit a link to your file</li>
-        <li>Also submit your JSON file in the root of the project’s Git repository</li>
-        <li>
+      <li>Export the wireframe to PDF, upload the file to the project’s Git repository and submit a link to your file</li>
+      <li>Also submit your JSON file in the root of the project’s Git repository</li>
+      <li>
         Publish your Single Page Application on Heroku and submit a link to your app and the source code on 
         your Git repository. Use https://github.com/mars/create-react-app-buildpack to learn how to deploy 
         React apps to Heroku.
@@ -87,7 +86,7 @@
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 # Appendix A
-### : Requirements for the sign language translator 
+### Requirements for the sign language translator 
     <p>The application will have one main feature: to act as a “translator” from regular text to sign language. The 
     application must be able to translate English words and short sentences to American sign language. The 
     images for the sign language will be provided.</p>
@@ -123,52 +122,62 @@
     <p>The Logout button should clear all the storage and return to the start page. You may design this however you’d 
     like.</p>
     
-### Required features
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-<p>The following features/tools must be present in the application:</p>
+### Required features
+The following features/tools must be present in the application:
 
 <ul>
-<li> React framework</li>
-
-<li>React Router to navigate between pages</li>
-
-<li>Store the translations in a json database using Node.js. You can make use of the json-server node 
-library. </li>
-
-<li>Json-Server: https://github.com/typicode/json-server</li>
+  <li>React framework</li>
+  <li>React Router to navigate between pages</li>
+  <li>Store the translations in a json database using Node.js. You can make use of the json-server node 
+  library. </li>
+  <li>Json-Server: https://github.com/typicode/json-server</li>
 </ul>
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 ### NB!
-1. IF YOU DO NOT USE REDUX, make use of the ContextAP.
-2.  Remember to upload the DB so that I may run it on my side.
+1. IF YOU DO NOT USE REDUX, make use of the ContextAPI.
+2. Remember to upload the DB so that I may run it on my side.
 
 ## Optional features
 
 <p>The following features/tools are optional in the application:</p>
 <ul>
-<li> React-Redux
-<li>https://react-redux.js.org</li>
-<li>I highly recommend using the Redux Toolkit: https://redux-toolkit.js.org</li>
-</li>
-<li> Auth0 Authentication client to manage login and session
-<li>https://auth0.com</li>
-</li>
+  <li> React-Redux
+    <li>https://react-redux.js.org</li>
+    <li>I highly recommend using the Redux Toolkit: https://redux-toolkit.js.org</li>
+  </li>
+    <li>Auth0 Authentication client to manage login and session
+    <li>https://auth0.com</li>
+  </li>
 </ul>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+# Resources
+Heroku: <a href="https://translate-noroff-app.herokuapp.com/">Demo</a>
 
+Figma: <a href="/resources/Figma_Diagram">Diagram</a>
+
+Code: <a href="/src">Source</a>
 
 # Install
 ```
-cd app
+cd translate-noroff-app
 npm install
 ```
 
 # Usage
 ```
-npm run dev
+npm run start
 ```
+
+# Demo
+Heroku App:
+
+<a href="https://translate-noroff-app.herokuapp.com/Login">https://translate-noroff-app.herokuapp.com/Login</a>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -193,11 +202,9 @@ Read more: [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 # Contact
-Email: <a href="mailto:github.cusatelli@gmail.com">github.cusatelli@gmail.com</a>
+Cusatelli: <a href="mailto:github.cusatelli@gmail.com">github.cusatelli@gmail.com</a>
 
-Email: <a href="mailto:github.omarabdiali0@gmail.com">github.OmarAbdiAli@gmail.com</a>
+OmarAbdiAli: <a href="mailto:github.omarabdiali0@gmail.com">github.OmarAbdiAli@gmail.com</a>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
