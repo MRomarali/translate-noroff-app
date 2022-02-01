@@ -50,6 +50,17 @@
             p {
                 font-size: 2rem;
                 margin-block: 0.25rem 1rem;
+
+                &.id {
+                    color: rgba($color: #000000, $alpha: 0.3);
+                    float: right;
+                    font-size: 0.75rem;
+                    justify-content: flex-end;
+                }
+            }
+
+            a {
+                color: royalblue;
             }
 
             img { 
@@ -60,6 +71,17 @@
                     border-radius: 0.2rem;
                 }  
             }
+        }
+    }
+
+    &.translate {
+        img {
+            &.sign-language {
+                display: inline;
+                width: 20%;
+                aspect-ratio: 1/2;
+                border-radius: 0.2rem;
+            }  
         }
     }
 }

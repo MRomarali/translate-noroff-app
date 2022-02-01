@@ -165,9 +165,24 @@ nav ul li a.active {
   font-size: 2rem;
   margin-block: 0.25rem 1rem;
 }
+.page.profile .translation p.id {
+  color: rgba(0, 0, 0, 0.3);
+  float: right;
+  font-size: 0.75rem;
+  justify-content: flex-end;
+}
+.page.profile .translation a {
+  color: royalblue;
+}
 .page.profile .translation img.sign-language {
   display: inline;
   width: 10%;
+  aspect-ratio: 1/2;
+  border-radius: 0.2rem;
+}
+.page.translate img.sign-language {
+  display: inline;
+  width: 20%;
   aspect-ratio: 1/2;
   border-radius: 0.2rem;
 }
