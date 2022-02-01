@@ -2,11 +2,141 @@
     "users": [
         {
             "id": 1,
-            "username": "John Doe"
+            "username": "John Doe",
+            "translations": [
+                {
+                    "id": 1,
+                    "name": "One",
+                    "sequence": [
+                        "O",
+                        "N",
+                        "E"
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Two",
+                    "sequence": [
+                        "T",
+                        "W",
+                        "O"
+                    ]
+                },
+                {
+                    "id": 3,
+                    "name": "Three",
+                    "sequence": [
+                        "T",
+                        "H",
+                        "R",
+                        "E",
+                        "E"
+                    ]
+                },
+                {
+                    "id": 4,
+                    "name": "Four",
+                    "sequence": [
+                        "F",
+                        "O",
+                        "U",
+                        "R"
+                    ]
+                },
+                {
+                    "id": 5,
+                    "name": "Five",
+                    "sequence": [
+                        "F",
+                        "I",
+                        "V",
+                        "E"
+                    ]
+                },
+                {
+                    "id": 6,
+                    "name": "Six",
+                    "sequence": [
+                        "S",
+                        "I",
+                        "X"
+                    ]
+                },
+                {
+                    "id": 7,
+                    "name": "Seven",
+                    "sequence": [
+                        "S",
+                        "E",
+                        "V",
+                        "E",
+                        "N"
+                    ]
+                },
+                {
+                    "id": 8,
+                    "name": "Eight",
+                    "sequence": [
+                        "E",
+                        "I",
+                        "G",
+                        "H",
+                        "T"
+                    ]
+                },
+                {
+                    "id": 9,
+                    "name": "Nine",
+                    "sequence": [
+                        "N",
+                        "I",
+                        "N",
+                        "E"
+                    ]
+                },
+                {
+                    "id": 10,
+                    "name": "Ten",
+                    "sequence": [
+                        "T",
+                        "E",
+                        "N"
+                    ]
+                },
+                {
+                    "id": 11,
+                    "name": "Eleven",
+                    "sequence": [
+                        "E",
+                        "L",
+                        "E",
+                        "V",
+                        "E",
+                        "N"
+                    ]
+                }
+            ]
         },
         {
             "id": 2,
-            "username": "Firstname Lastname"
+            "username": "Firstname Lastname",
+            "translations": [
+                {
+                    "id": 1,
+                    "name": "Translate",
+                    "sequence": [
+                        "T",
+                        "R",
+                        "A",
+                        "N",
+                        "S",
+                        "L",
+                        "A",
+                        "T",
+                        "E"
+                    ]
+                }
+            ]
         }
     ]
 }
