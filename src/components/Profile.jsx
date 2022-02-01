@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
-import { useState } from "react/cjs/react.development";
 import { getAuth, getSessionTranslations } from "../storage/Session";
 
 export default function Profile() {
