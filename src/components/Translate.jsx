@@ -5,9 +5,10 @@ import { apiPostTranslationsRequest } from "../api/Index";
 import { getAuth, setSessionTranslations } from "../storage/Session";
 
 export default function Translate() {
-  const [value, setValue] = useState('');
-  const [imageSequence, setImageSequence] = useState([]);
-  const [disabled, setDisabled] = useState(false);
+  const [value, setValue] = useState(() => { return ""; });
+  const [imageSequence, setImageSequence] = useState(() => { return []; });
+  const [disabled, setDisabled] = useState(() => { return false; });
+  
   const auth = getAuth();
   if (!auth) { return <Navigate to="/Login" />; }
 
