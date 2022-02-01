@@ -1,6 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+/**
+ * Simple navigation bar for routing user around the website.
+ * @returns 
+ */
 export default function Navigation() {
   return (
     <nav>

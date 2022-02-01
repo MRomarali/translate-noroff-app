@@ -9,6 +9,11 @@ import Navigation from "../components/Navigation";
 import Profile from '../components/Profile';
 import Translate from '../components/Translate';
 
+/**
+ * Simple React Routing component.
+ * Enables the desired routing paths the user can / can not take.
+ * @returns 
+ */
 export default function Routing() {
   return (
     <BrowserRouter>

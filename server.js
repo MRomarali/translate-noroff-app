@@ -7,6 +7,7 @@ const middlewares = jsonServer.defaults({
   static: './build'
 });
 
+// PORT || 4000 - Same as Heroku just in case.
 const PORT = process.env.PORT || 4000;
 
 // Set default middlewares (logger, static, cors and no-cache)
