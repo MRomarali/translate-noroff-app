@@ -5,9 +5,10 @@ export const API_URL = "https://translate-noroff-app.herokuapp.com/api";
 
 export async function apiPostUserLoginRequest(value) {
     console.log(API_URL);
-    await fetch(`${API_URL}/users/?username=${value}`)
+    await fetch(`${API_URL}/users?username=${value}`)
         .then(response => response.json())
         .then(data => {
+            console.log(data);
             if (data.length > 0) {
                 console.log(`${value} was found in database!`);
                 const user = data[0];
