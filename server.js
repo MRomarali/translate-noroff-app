@@ -7,7 +7,7 @@ const middlewares = jsonServer.defaults({
   static: './build'
 });
 
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 3000;
 
 // Set default middlewares (logger, static, cors and no-cache)
 server.use(middlewares);
@@ -24,9 +24,9 @@ server.use((req, _res, next) => {
   next();
 });
 
-server.use(jsonServer.rewriter({
-  '/api/*': '/$1',
-}));
+// server.use(jsonServer.rewriter({
+//   '/api/*': '/$1',
+// }));
 
 // Use default router 
 server.use('/api', router);
